@@ -4,10 +4,9 @@ const fetchPokemon = () => {
     pokeName = pokeName.toLowerCase();
     const url = `https://pokeapi.co/api/v2/pokemon/${pokeName}`;
     fetch(url).then((res) => {
-        //condicional por si el pokemon no existe
         if (res.status != "200") {
             console.log(res);
-            pokeImage("./pokemon-sad.gif")
+            alert("no se encuentra el pokemon!")
         }
         else {
             return res.json();
@@ -18,6 +17,9 @@ const fetchPokemon = () => {
             let pokeImg = data.sprites.front_default;
             pokeImage(pokeImg);
             console.log(pokeImg);
+            let statHP = data.stats[0].base_stat;
+            pokeStatHP(statHP)
+            console.log(statHP);
         }
     });
 }
@@ -27,5 +29,7 @@ const pokeImage = (url) => {
     pokePhoto.src = url;
 }
 
-
-
+const pokeStatHP = (url) => {
+    const pokeStatHP = document.getElementById("statHP");
+    pokeStatHP.innerHTML = url;
+}
