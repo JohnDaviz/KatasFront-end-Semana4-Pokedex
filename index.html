@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex LaunchX</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Pokedex LaunchX</h1>
+        <input type="text" placeholder="pikachu" id="pokeName" name="pokeName">
+        <br>
+        <img class="materialboxed" width="250" src="./images/pokedex.jpg" alt="Pokemon" id="pokeImg">
+        <br>
+        <table>
+            <thead>
+              <tr>
+                  <th>Hp</th>
+                  <th>Attack</th>
+                  <th>Defense</th>
+                  <th>Special Attack</th>
+                  <th>Special Defense</th>
+                  <th>Speed</th>
+              </tr>
+            </thead>
+    
+            <tbody>
+              <tr>
+                <td></td>
+                <td></td>
+                <td>$</td>
+                <td>$</td>
+                <td>$</td>
+                <td>$</td>
+              </tr>
+            </tbody>
+          </table>
+        <br>
+        <button class="grey btn waves-effect waves-light" onclick="fetchPokemon()">Cambiar Imágen</button>
+    </div>
+
+    
+</body>
+<footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="./js/init.js"></script>
+    <script src="./js/pokedex.js"></script>
+</footer>
+</html>
